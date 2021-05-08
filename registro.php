@@ -9,11 +9,10 @@ if(isset($_POST['submit'])){
   $mes = $_POST['mes'];
   $anio = $_POST['anio'];
   $email = $_POST['email'];
-  $clave1 = $_POST['clave1'];
-  $clave2 = $_POST['clave2'];
+  $clave = $_POST['clave'];
 
   $crear_usuario = "INSERT INTO usuarios (nombre, apellidos, dia, mes, anio, email, clave1, clave2) VALUES
-  ('{$nombre}','{$apellidos}', '{$dia}', '{$mes}', '{$anio}', '{$email}', '{$clave1}', '{$clave2}')";
+  ('{$nombre}','{$apellidos}', '{$dia}', '{$mes}', '{$anio}', '{$email}', '{$clave}')";
 
   $resul = $conexion->query($crear_usuario);
   if($resul){

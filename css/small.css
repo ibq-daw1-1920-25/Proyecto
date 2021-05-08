@@ -1,0 +1,28 @@
+/****************** PÁGINA PRINCIPAL ******************/
+
+
+/* CABECERA Y MENU DE NAVEGACION*/
+
+nav {
+    text-align: center;
+}
+
+#imgPerfil {
+    width: 30px;
+    padding-top: 1em;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+body {
+    background-color: #303030;
+}
+
+.contenido {
+    background-color: #F2F2F2;
+}
+
+.columna {
+    background-color: #F2F2F2;
+}

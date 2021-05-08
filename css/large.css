@@ -1,0 +1,78 @@
+    /****************** PÁGINA PRINCIPAL ******************/
+    /* CABECERA Y MENU DE NAVEGACION*/
+    
+    #logoPrincipal {
+        width: 200px;
+        float: left;
+        flex-direction: row;
+        vertical-align: middle;
+    }
+    
+    nav li {
+        float: left;
+        display: inline;
+        margin: 0 10px 0 0;
+    }
+    /* BUSCADOR */
+    
+    .buscador {
+        float: right;
+        flex-direction: row;
+        display: inline;
+        margin: 0 10px 0 0;
+    }
+    
+    #perfil {
+        float: right;
+        position: relative;
+        flex-direction: row;
+    }
+    /* CUERPO DE LA PÁGINA */
+    
+    .container {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    .contenido {
+        width: 71%;
+        padding: 10px;
+    }
+    
+    .columna {
+        padding: 3em;
+        width: 29%;
+    }
+    /****************** REGISTROS ******************/
+    
+    #contformulario {
+        margin: 0 auto;
+        padding: 60px;
+        max-width: 600px;
+    }
+    
+    #continicio {
+        padding: 60px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    #logoRegistro {
+        display: block;
+        margin: auto;
+    }
+    
+    #btnBack {
+        float: right;
+    }
+    
+    form input {
+        margin-bottom: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    button {
+        display: block;
+    }
