@@ -1,22 +1,18 @@
-<?php
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEARTIST - Iniciar Sesión</title>
     <link rel="stylesheet" href="./css/import.css">
     <link rel="icon" type="image/png" href="./img/play.png" />
   </head>
-  <body>
+  <body class = "bodySmall">
     <img id="logoRegistro" src="./img/logo.png" alt="Logo de HEARTIST">
     <div id="continicio">
-    <form action="principal.php" method="post">
+    <form action="login.php" method="post">
         <label>Email:</label>
-        <input type="text" name="usuario" value="" required><br>
+        <input type="text" name="email" value="" required><br>
         <label>Contraseña:</label>
         <input type="password" name="clave" value="" maxlength="8" required><br>
         <p id = "msg"></p><br>

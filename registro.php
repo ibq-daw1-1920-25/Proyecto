@@ -5,14 +5,12 @@ if(isset($_POST['submit'])){
 
   $nombre = $_POST['nombre'];
   $apellidos = $_POST['apellidos'];
-  $dia = $_POST['dia'];
-  $mes = $_POST['mes'];
-  $anio = $_POST['anio'];
+  $fecha_nac = $_POST['fecha'];
   $email = $_POST['email'];
   $clave = $_POST['clave'];
 
-  $crear_usuario = "INSERT INTO usuarios (nombre, apellidos, dia, mes, anio, email, clave1, clave2) VALUES
-  ('{$nombre}','{$apellidos}', '{$dia}', '{$mes}', '{$anio}', '{$email}', '{$clave}')";
+  $crear_usuario = "INSERT INTO usuarios (nomobre, apellidos, fecha, email, clave) VALUES
+  ('{$nombre}','{$apellidos}', '{$fecha_nac}', '{$email}', '{$clave}')";
 
   $resul = $conexion->query($crear_usuario);
   if($resul){
@@ -23,5 +21,3 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-Esta es la página principal de:
-<img src="./img/logo.png" alt="Logo de HEARTIST">

@@ -5,9 +5,13 @@
 
 #logoPrincipal {
     border-right: #F97FC7 1px solid;
-    padding-right: 1em;
     padding-bottom: 1px;
     width: 100%;
+}
+
+.menuNavegacion {
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -18,10 +22,11 @@ nav ul {
     list-style-type: none;
     text-align: center;
     padding-bottom: 4em;
+    padding-left: 0;
 }
 
 nav li {
-    padding: 1.35em;
+    padding: 1.25em;
     word-spacing: 3em;
     align-items: center;
 }
@@ -41,15 +46,16 @@ nav ul li:hover {
 /* BUSCADOR */
 
 .buscador {
-    padding: 1.35em;
+    padding-top: 1em;
     word-spacing: 3em;
     align-items: center;
 }
 
 #search {
     height: 30px;
+    width: 150px;
     background: #303030;
-    font-size: 10pt;
+    font-size: 13pt;
     color: #F2F2F2;
     padding-left: 1em;
     border-radius: 5px;
@@ -66,8 +72,9 @@ nav ul li:hover {
 }
 
 #imgPerfil {
-    width: 35px;
+    width: 30px;
     padding-top: 1em;
+    padding-left: 0.5em;
 }
 
 
@@ -75,6 +82,9 @@ nav ul li:hover {
 
 body {
     font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 label {
@@ -83,6 +93,7 @@ label {
 
 .container {
     border: blue 1px solid;
+    width: 100%;
 }
 
 .contenido {

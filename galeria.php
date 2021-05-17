@@ -1,7 +1,3 @@
-<?php
-include('conexionBD.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -36,20 +32,22 @@ include('conexionBD.php');
 
     <section class = "container">
       <div class = "contenido">
-        <p>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type 
-        specimen book. It has survived not only five centuries, but also the leap into 
-        electronic typesetting, remaining essentially unchanged. It was popularised in 
-        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>  
+        <?php 
+            
+        ?>
 
       </div>
       <div class = "columna">
-          Columna
+      <form name="MiForm" id="MiForm" method="post" action="cargar.php" enctype="multipart/form-data">
+        <h4>Selecciona una nueva imagen</h4>
+        <div>
+          <label>Archivos</label>
+          <div>
+            <input type="file" id="image" name="image" multiple>
+          </div>
+          <button name="submit">Cargar Imagen</button>
+        </div>
+      </form>
       </div>
     
 

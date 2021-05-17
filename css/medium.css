@@ -4,11 +4,25 @@
 /* CABECERA Y MENU DE NAVEGACION*/
 
 #imgPerfil {
-    width: 40px;
-    padding-top: 1em;
+    width: 45px;
+    padding: 2em;
     display: block;
     margin: auto;
     align-items: center;
+}
+
+nav li {
+    word-spacing: inherit;
+}
+
+nav li a {
+    font-size: 24px;
+}
+
+#search {
+    height: 50px;
+    width: 300px;
+    font-size: 16pt;
 }
 
 body {
@@ -20,5 +34,48 @@ body {
 }
 
 .columna {
+    background-color: #F2F2F2;
+}
+
+
+/****************** REGISTROS ******************/
+
+#contformulario {
+    padding: 60px;
+    width: 80%;
+    border: 1px solid #FE0798;
+    font-size: 17px;
+    align-items: center;
+}
+
+#logoRegistro {
+    display: block;
+    margin: auto;
+    background-color: #F2F2F2;
+}
+
+#continicio {
+    padding: 60px;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+#btnBack {
+    float: right;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    display: block;
+}
+
+.bodySmall {
     background-color: #F2F2F2;
 }

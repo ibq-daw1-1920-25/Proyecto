@@ -7,12 +7,21 @@ nav {
     text-align: center;
 }
 
+nav li a {
+    font-size: 20px;
+}
+
 #imgPerfil {
-    width: 30px;
+    width: 35px;
     padding-top: 1em;
     display: block;
     margin: auto;
     align-items: center;
+}
+
+#search {
+    height: 40px;
+    width: 200px;
 }
 
 body {
@@ -24,5 +33,51 @@ body {
 }
 
 .columna {
+    background-color: #F2F2F2;
+}
+
+
+/****************** REGISTROS ******************/
+
+#contformulario {
+    margin: 0 auto;
+    padding: 60px;
+    width: 100%;
+    border: 1px solid #FE0798;
+    font-size: 18px;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+#logoRegistro {
+    display: block;
+    margin: auto;
+    background-color: #F2F2F2;
+}
+
+#continicio {
+    padding: 60px;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+#btnBack {
+    float: right;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    display: block;
+}
+
+.bodySmall {
     background-color: #F2F2F2;
 }
