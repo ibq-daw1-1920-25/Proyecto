@@ -1,6 +1,10 @@
     /****************** PÁGINA PRINCIPAL ******************/
     /* CABECERA Y MENU DE NAVEGACION*/
     
+    .login {
+        float: right;
+    }
+    
     #logoPrincipal {
         width: 200px;
         float: left;
@@ -8,10 +12,16 @@
         vertical-align: middle;
     }
     
+    nav ul {
+        background-color: #303030;
+        list-style-type: none;
+        text-align: center;
+        margin: 0%;
+    }
+    
     nav li {
         float: left;
         display: inline;
-        margin: 0 10px 0 0;
     }
     /* BUSCADOR */
     

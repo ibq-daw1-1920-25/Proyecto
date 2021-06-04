@@ -1,15 +1,9 @@
 <?php
 
-if(isset($_GET['cerrar'])) {
+session_start();
+session_destroy();
 
-  //Vaciamos y destruimos las variables de sesión
-  $_SESSION['email'] = NULL;
-  $_SESSION['clave'] = NULL;
-  unset($_SESSION['email']);
-  unset($_SESSION['clave']);
-
-  //Redireccionamos a la pagina index.php
-  header('Location: index.php');
-}
+header("location: 'formulario_inicio.php'");
+exit();
 
 ?>

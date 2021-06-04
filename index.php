@@ -1,27 +1,56 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEARTIST - Iniciar Sesión</title>
-    <link rel="stylesheet" href="./css/import.css">
-    <link rel="icon" type="image/png" href="./img/play.png" />
-  </head>
-  <body class = "bodySmall">
-    <img id="logoRegistro" src="./img/logo.png" alt="Logo de HEARTIST">
-    <div id="continicio">
-    <form action="login.php" method="post">
-        <label>Email:</label>
-        <input type="text" name="email" value="" required><br>
-        <label>Contraseña:</label>
-        <input type="password" name="clave" value="" maxlength="8" required><br>
-        <p id = "msg"></p><br>
-        <button type="submit" name="submit">Iniciar Sesión</button>
-        <div id = "registro">
-          <h3>¿Aún no tienes cuenta?</h3>
-          <a href="formulario_registro.php">Regístrate aquí</a>
-        </div>
-    </form>
+  <title>HEARTIST - Inicio</title>
+  <body>
+  <div class = "login">
+    <a href="formulario_inicio.php">Login</a>
+    <a href="formulario_registro.php">Registrarse</a>
   </div>
-  </body>
-</html>
+
+    
+    <?php
+      include('layout.php');
+    ?>
+
+
+    <section class = "container_index">
+      <div class = "contenido_index">
+        <p>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type 
+        specimen book. It has survived not only five centuries, but also the leap into 
+        electronic typesetting, remaining essentially unchanged. It was popularised in 
+        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>  
+      </div>
+
+      <div class = "index_perfiles">
+      Perfiles
+
+          <?php
+          require('conexionBD.php');
+          
+          $sql = "SELECT usuario FROM usuarios";
+          $resultado = $conexion->query($sql);
+
+          if(!$resultado) {
+            echo "No se pudieron cargar los perfiles.";
+          }
+          
+          while($row = mysql_fetch_assoc($resultado)){
+            echo "<div> " . $registro ['usuario'] . "</div> ";
+          }
+          $resultado->close();
+
+          ?>
+
+      </div>
+
+    
+
+    </section>
+
+    <?php
+      include('footer.php');
+    ?>

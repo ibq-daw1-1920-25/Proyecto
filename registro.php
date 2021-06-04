@@ -1,23 +1,24 @@
 <?php
 
-include('conexionBD.php');
+require('conexionBD.php');
 if(isset($_POST['submit'])){
 
-  $nombre = $_POST['nombre'];
-  $apellidos = $_POST['apellidos'];
+  $usuario = $_POST['usuario'];
   $fecha_nac = $_POST['fecha'];
   $email = $_POST['email'];
   $clave = $_POST['clave'];
 
-  $crear_usuario = "INSERT INTO usuarios (nomobre, apellidos, fecha, email, clave) VALUES
-  ('{$nombre}','{$apellidos}', '{$fecha_nac}', '{$email}', '{$clave}')";
+  $crear_usuario = "INSERT INTO usuarios (usuario, fecha, email, clave) VALUES
+  ('{$usuario}', '{$fecha_nac}', '{$email}', '{$clave}')";
 
   $resul = $conexion->query($crear_usuario);
   if($resul){
     echo "¡Bienvenido/a a HEARTIST! <br>";
+    header("location: index.php");
   } else {
     echo "Ha habido un error en el registro de tu cuenta. Por favor, inténtalo de nuevo.";
   }
 }
+
 ?>
 
