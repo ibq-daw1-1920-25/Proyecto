@@ -54,6 +54,24 @@
         padding: 3em;
         width: 29%;
     }
+    
+    #botonInicioSesion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contenido_usuario {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    
+    .divGaleria {
+        display: block;
+        text-align: center;
+        padding-top: 5em;
+        padding-bottom: 2em;
+    }
     /****************** REGISTROS ******************/
     
     #contformulario {

@@ -7,6 +7,11 @@
     float: right;
 }
 
+#logoPrincipal {
+    padding-bottom: 0px;
+    width: 100%;
+}
+
 #imgPerfil {
     width: 45px;
     padding: 2em;
@@ -37,8 +42,12 @@ body {
     background-color: #F2F2F2;
 }
 
+.contenido_galeria {
+    width: 100%;
+}
+
 .columna {
-    background-color: #F2F2F2;
+    background-color: #303030;
 }
 
 
@@ -82,4 +91,33 @@ button {
 
 .bodySmall {
     background-color: #F2F2F2;
+}
+
+#form_obra {
+    width: 100%;
+    align-items: center;
+}
+
+#form_obra input {
+    width: 50%;
+}
+
+#form_obra button {
+    margin-left: 4em;
+}
+
+#imgSalir {
+    width: 50px;
+    display: block;
+}
+
+#salir {
+    vertical-align: middle;
+    padding-right: 1em;
+}
+
+.menu_perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

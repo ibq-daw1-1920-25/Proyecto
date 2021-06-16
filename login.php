@@ -1,28 +1,30 @@
 <?php
 
-$cadena_conexion = 'mysql:dbname=heartistbd;host=localhosts:3307';
-$usu = 'root';
-$clave = "";
+include('conexionBD.php');
+session_start();
 
-$conexion = mysqli_connect($cadena_conexion, $usu, $clave);
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $clave = $_POST['clave'];
 
-if(!$conexion) {
-    die("No se puede conectar con la base de datos." . mysqli_connect_error());
+    $comprobar_usuario = $conexion->query("SELECT * FROM usuarios WHERE email = '". $email ."' AND clave = '". $clave ."'");
+
+    $resul = $comprobar_usuario->fetch(PDO::FETCH_ASSOC);
+    if($email == "" OR $clave == ""){
+        echo '<p class = "error"> Los campos no pueden estar vacíos.</p>';
+      }
+
+
+    if(!$resul){
+        include('formulario_inicio.php');
+        echo '<p class = "error"> El usuario y/o la contraseña son incorrectos.</p>';
+
+
+    }else {
+        $_SESSION['usuario'] = $resul['usuario'];
+        header("location: index.php");
+    }
+
 }
-
-$usuario = $_POST["email"];
-$password = $_POST["clave"];
-
-$q = mysqli_query($conexion, 
-    "SELECT * FROM usuarios WHERE usuario = '". $usuario ."' and  clave = '". $password ."' ");
-
-$reg = mysqli_num_rows($q);
-
-if($reg == 1){
-    header('location:index.html');
-} elseif ($reg == 0){
-    echo "La cuenta o la contraseña es incorrecta.";
-}
-
 
 ?>

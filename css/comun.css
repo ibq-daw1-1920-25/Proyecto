@@ -34,13 +34,13 @@
         background-color: #303030;
         list-style-type: none;
         text-align: center;
-        padding-bottom: 4em;
+        padding-bottom: 4.1em;
         margin: 0%;
         padding-left: 0%;
     }
     
     nav li {
-        padding: 1.25em;
+        padding: 1.30em;
         word-spacing: 3em;
         align-items: center;
     }
@@ -55,28 +55,6 @@
     nav ul li:hover {
         background-color: #F97FC7;
     }
-    /* BUSCADOR */
-    
-    .buscador {
-        padding-top: 1em;
-        word-spacing: 3em;
-        align-items: center;
-    }
-    
-    #search {
-        height: 30px;
-        width: 150px;
-        background: #303030;
-        font-size: 13pt;
-        color: #F2F2F2;
-        padding-left: 1em;
-        border-radius: 5px;
-        border: #F97FC7 1px solid;
-    }
-    
-    #search::placeholder {
-        color: #F97FC7;
-    }
     
     #perfil {
         vertical-align: middle;
@@ -88,6 +66,18 @@
         padding-top: 1em;
         padding-left: 0.5em;
     }
+    
+    #imgSalir {
+        width: 30px;
+        padding-top: 1em;
+        float: right;
+    }
+    
+    #salir {
+        vertical-align: middle;
+        padding-right: 1em;
+        float: right;
+    }
     /* CUERPO DE LA PÁGINA */
     
     body {
@@ -95,6 +85,7 @@
         padding: 0;
         margin: 0;
         width: 100%;
+        background-color: white;
     }
     
     label {
@@ -114,13 +105,20 @@
     
     .contenido_index {
         border-bottom: #303030 2px solid;
+        background-color: white;
         padding-left: 2em;
         padding-right: 2em;
         padding-bottom: 2em;
     }
     
     .index_perfiles {
-        padding: 2em;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: auto;
+        justify-content: center;
     }
     
     .container_exp {
@@ -138,12 +136,20 @@
         justify-content: center;
         padding: 1.5em;
         width: 100%;
+        background-color: white;
+    }
+    
+    .contenido_perfil {
+        background-color: white;
+        padding-left: 2em;
+        padding-bottom: 2em;
     }
     
     .title {
         width: 100px;
         border: #0D0D0D 1px solid;
-        margin: 2px;
+        margin-right: 4em;
+        margin-bottom: 2em;
         padding: 2em 2.5em 2em 2.5em;
         text-align: center;
         line-height: 3em;
@@ -156,24 +162,119 @@
     
     h2 {
         border-bottom: #303030 solid 1px;
-        padding: 1.5em;
+        padding-left: 1.5em;
+        padding-bottom: 1.5em;
     }
     
     .columna {
-        border-left: #303030 2px solid;
         background-color: #303030;
         color: #F2F2F2;
-        width: 33%;
-        border-top: #F97FC7 1px solid;
         border-bottom: #F97FC7 1px solid;
+        text-align: center;
     }
     
     .contenido_galeria {
         width: 75%;
+        background-color: white;
+        padding-left: 2em;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: auto;
+    }
+    
+    .mostrar_perfiles {
+        border: #FE0798 2px solid;
+        font-weight: bold;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 2em 2.5em 2em 2.5em;
+        margin-right: 4em;
+        margin-bottom: 2em;
+    }
+    
+    table {
+        padding-left: 2em;
+        width: 80%;
+        border: 1px solid #999CA0;
+        text-align: left;
+        border-collapse: collapse;
+        margin: 0 0 1em 0;
+        caption-side: top;
+        margin-left: 3em;
+    }
+    
+    th,
+    td {
+        border-bottom: 1px solid #999CA0;
+        width: 25%;
+        padding: 0.8em;
+    }
+    
+    td {
+        text-align: right;
+    }
+    
+    .h3perfil {
+        padding-left: 3em;
     }
     
     #form_obra {
         text-align: center;
+    }
+    
+    #form_obra #inputArchivo {
+        border: #FE0798 1px solid;
+    }
+    
+    .error {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        padding-bottom: 3em;
+    }
+    
+    .divGaleria {
+        display: block;
+        text-align: center;
+        padding-top: 5em;
+        padding-bottom: 2em;
+    }
+    
+    .divGaleria a {
+        text-decoration: none;
+    }
+    
+    #botonInicioSesion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contenido_usuario {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    
+    #div1 {
+        width: 100%;
+        border-bottom: 2px solid #FE0798;
+        padding-bottom: 2em;
+    }
+    
+    #div2 {
+        width: 100%;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-bottom: 2em;
+    }
+    
+    .divCat1 {
+        background-color: white;
     }
     /* FOOTER */
     
@@ -228,8 +329,55 @@
         letter-spacing: 1px;
     }
     
+    #btnEditar {
+        padding-left: 2em;
+    }
+    
     #textarea {
-        padding: 1em;
+        margin-bottom: 2em;
+        padding: 2em;
+        border-radius: 10px;
+        font-family: "Montserrat";
+    }
+    
+    .form_obra input {
+        box-sizing: border-box;
+        border: none;
+        font-size: 1em;
+        border-radius: 10px;
+    }
+    
+    #cat_obra {
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        color: #444;
+        line-height: 1.3;
+        padding: .4em 1.4em .3em .8em;
+        width: 400px;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 20px auto;
+        border: 1px solid #FE0798;
+    }
+    
+    #btnObraDisabled {
+        background-color: #999DA0;
+    }
+    
+    .divObras {
+        border: 1px solid #999CA0;
+        border-radius: 5px;
+        padding: 2em 2.5em 2em 2.5em;
+        margin: 2em;
+        display: inline-block;
+        height: fit-content;
+        text-align: center;
+        width: 200px;
+    }
+    
+    .obraUsu {
+        width: 150px;
     }
     /****************** FOOTER ******************/
     

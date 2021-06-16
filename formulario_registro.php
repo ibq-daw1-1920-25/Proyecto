@@ -1,4 +1,3 @@
-<!-- C Ó D I G O   P H P -->
 
 <?php
 include('conexionBD.php'); 
@@ -14,16 +13,16 @@ include('conexionBD.php');
     <link rel="icon" type="image/png" href="./img/play.png" />
   </head>
   
-  <body class = "bodySmall" onload="inicio()">
+  <body class = "bodySmall">
     <img id="logoRegistro" src="./img/logo.png" alt="Logo de HEARTIST">
 
     <div id="contformulario">
       <span><button onclick="history.go(-1); return false;" id = "btnBack">Atrás</button></span>
       <h2>CREAR CUENTA :</h2>
     
-      <form id = "miFormulario" action="registro.php" method="post" >
+      <form id = "miFormulario" action="registro.php" method="post" onsubmit="inicio()">
         <label>Nombre de usuario:</label>
-        <input type="text" id = "nombre" name="usuario" value="" maxlength="15"><br>
+        <input type="text" id = "nombre" name="usuario" value="" maxlength="20"><br>
 
         <label>Fecha de nacimiento:</label>
         <input type="date" id = "fecha" name="fecha">

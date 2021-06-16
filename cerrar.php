@@ -3,7 +3,7 @@
 session_start();
 session_destroy();
 
-header("location: 'formulario_inicio.php'");
+header("location: index.php");
 exit();
 
 ?>

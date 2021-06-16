@@ -1,11 +1,18 @@
   <title>HEARTIST - Inicio</title>
   <body>
-  <div class = "login">
-    <a href="formulario_inicio.php">Login</a>
-    <a href="formulario_registro.php">Registrarse</a>
-  </div>
+  <?php
+    session_start();
+    if (!isset($_SESSION['usuario'])){
+    ?>
+      <div class = "login">
+        <a href="formulario_inicio.php">Login</a>
+        <a href="formulario_registro.php">Registrarse</a>
+      </div>
 
-    
+  <?php  
+  }
+
+  ?>
     <?php
       include('layout.php');
     ?>
@@ -13,35 +20,50 @@
 
     <section class = "container_index">
       <div class = "contenido_index">
-        <p>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type 
-        specimen book. It has survived not only five centuries, but also the leap into 
-        electronic typesetting, remaining essentially unchanged. It was popularised in 
-        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <?php 
+        if(isset($_SESSION['usuario'])) {  ?>
+        <p></p>
+        <strong> Bienvenidx <?php echo $_SESSION['usuario'] ?>!</strong><br>
+        <p></p>
+        <?php
+        }
+       ?>
+
+        <p>Músicos, pintores, escultores, bailarines, fotógrafos... en definitiva: ARTISTAS. 
+        Si te sientes parte de uno de estos colectivos, ¡ésta es tu aplicación! 
+        A través de HEARTIST, podrás acceder a una gran cantidad de contenido de otros creadores como tú.</p>
+        <p>Nuestro objetivo es crear una gran comunidad donde puedas conectar con todo tipo de artistas
+          y ellos contigo. Ya seas amateur o profesional, haz que tus obras, espectáculos o canciones lleguen
+          a todas las partes del mundo.</p>
+        <p>Crea tu perfil, sube tu contenido, conecta con otros artistas y ¡disfruta de HEARTIST!</p>
+        
+        
+
         </p>  
       </div>
 
       <div class = "index_perfiles">
-      Perfiles
 
           <?php
-          require('conexionBD.php');
+          include('conexionBD.php');
           
-          $sql = "SELECT usuario FROM usuarios";
-          $resultado = $conexion->query($sql);
+          $mostrar_perfiles = $conexion->prepare("SELECT usuario FROM usuarios");
+          $mostrar_perfiles->execute();
+          $resultado = $mostrar_perfiles->fetchAll(PDO::FETCH_COLUMN); 
 
           if(!$resultado) {
             echo "No se pudieron cargar los perfiles.";
+          } elseif($resultado){
+           
+            foreach ($resultado as $rows) {
+              $url = "usuario.php?usuario=" . $rows;
+              echo "<a href = '$url'><div class = 'mostrar_perfiles'> " . $rows . "</div></a> ";
+              
+            }
+              
+            
           }
           
-          while($row = mysql_fetch_assoc($resultado)){
-            echo "<div> " . $registro ['usuario'] . "</div> ";
-          }
-          $resultado->close();
 
           ?>
 
